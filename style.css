@@ -1,0 +1,463 @@
+:root {
+    /* Define variáveis de cores para fácil reutilização em todo o CSS */
+    --verde-escuro: #1a9047;
+    --verde-claro: #2BC866;
+    --azul-escuro: #004AAD;
+}
+
+@font-face {
+    /* Define uma fonte personalizada */
+    font-family: 'Helvetica Neue';
+    src: url('../teste-frontend/fonte/helvetica-neue-5.zip') format('helvetica'),
+         url('../teste-frontend/fonte/HelveticaNeueBold.otf') format('helvetica_bold');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    /* Define o padding superior do body */
+    padding-top: 190px;
+}
+
+* {
+    /* Reseta padding e margin para todos os elementos e define a fonte */
+    padding: 0;
+    margin: 0;
+    font-family: "helvetica";
+}
+
+header {
+    /* Estiliza o cabeçalho fixo no topo da página */
+    background-color: rgb(255, 255, 255); /* Cor de fundo branca */
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.507); /* Sombra leve */
+    position: fixed; /* Fixa o cabeçalho no topo da página */
+    width: 100%; /* Ocupa toda a largura da página */
+    top: 0;
+    left: 0;
+    padding: 10px 0; /* Espaçamento interno */
+    z-index: 1000; /* Garante que o cabeçalho esteja acima de outros elementos */
+}
+
+.nav-bar {
+    /* Barra de navegação */
+    display: flex;
+    justify-content: space-between; /* Espaça os itens de navegação igualmente */
+    padding: 1.5rem 6rem; /* Espaçamento interno */
+}
+
+section {
+    /* Ajusta o padding e margin das seções para link ancora redicirecionar para seção com precisão */
+    padding-top: 140px; /* Espaçamento interno no topo */
+    margin-top: -140px; /* Compensa o padding superior com uma margem negativa */
+}
+
+.logo {
+    /* Estiliza o container do logotipo */
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens */
+}
+
+i.fa-truck-fast {
+    /* Estiliza o ícone do caminhão */
+    margin-right: 5px;
+    font-size: 45px;
+    color: var(--verde-claro); /* Usa a variável de cor verde claro */
+}
+
+.logo h1 {
+    /* Estiliza o título do logotipo */
+    color: var(--azul-escuro); /* Usa a variável de cor azul escuro */
+}
+
+.nav-list {
+    /* Estiliza a lista de navegação */
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens */
+}
+
+.nav-list ul {
+    /* Estiliza a lista não ordenada dentro da nav-list */
+    display: flex;
+    justify-content: center; /* Centraliza os itens da lista */
+    list-style: none; /* Remove os marcadores da lista */
+    transition: all 5s ease; /* Transição de 5 segundos */
+}
+
+.nav-list .nav-item a:hover {
+    /* Estiliza o link ao passar o mouse sobre ele */
+    font-size: 1.3rem; /* Aumenta o tamanho da fonte */
+    color: var(--verde-claro); /* Muda a cor para verde claro */
+}
+
+.nav-item {
+    /* Define o espaço entre os itens de navegação */
+    margin: 0 15px;
+}
+
+.nav-link {
+    /* Estiliza os links de navegação */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 1.15rem; /* Define o tamanho da fonte */
+    color: var(--azul-escuro); /* Usa a variável de cor azul escuro */
+    font-weight: 400; /* Define o peso da fonte */
+}
+
+.nav-buttons button {
+    /* Estiliza os botões na barra de navegação */
+    border: none; /* Remove a borda */
+    background-color: var(--verde-escuro); /* Cor de fundo do botão */
+    padding: 10px 20px; /* Espaçamento interno */
+    margin-inline: 12px; /* Espaçamento horizontal */
+    border-radius: 15px; /* Bordas arredondadas */
+    color: white; /* Cor do texto */
+    letter-spacing: 2px; /* Espaçamento entre as letras */
+}
+
+.nav-buttons button a {
+    /* Estiliza os links dentro dos botões */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: 500; /* Define o peso da fonte */
+    font-size: 1.1rem; /* Define o tamanho da fonte */
+}
+
+.nav-buttons .button-entrar {
+    /* Estiliza o botão de entrar */
+    color: var(--verde-claro); /* Cor do texto */
+    background-color: white; /* Cor de fundo */
+    border: solid 1px var(--verde-claro); /* Borda verde claro */
+    transition: all 1s ease; /* Transição de 1 segundo */
+}
+
+.nav-buttons .button-cadastre {
+    /* Estiliza o botão de cadastro */
+    transition: all 1s ease; /* Transição */
+}
+
+.nav-buttons .button-entrar:hover {
+    /* Estiliza o botão de entrar ao passar o mouse sobre ele */
+    background-color: var(--verde-claro); /* Muda o fundo para verde claro */
+    color: white; /* Muda a cor do texto para branco */
+    border: solid 1px white; /* Muda a borda para branco */
+    cursor: pointer; /* Adiciona o cursor pointer ao passar sobre o botão */
+}
+
+.nav-buttons .button-cadastre:hover {
+    /* Estiliza o botão de cadastro ao passar o mouse sobre ele */
+    background-color: white; /* Muda o fundo para branco */
+    color: green; /* Muda a cor do texto para verde */
+    border: solid 1px var(--verde-claro); /* Borda verde claro */
+    cursor: pointer; /* Adiciona o cursor pointer ao passar sobre o botão */
+}
+
+.home {
+    /* Estiliza a seção home */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 20px; /* Margem superior */
+}
+
+.home h1 {
+    /* Estiliza o título na seção home */
+    margin-bottom: 20px; /* Margem inferior */
+    color: var(--verde-claro); /* Cor do texto */
+    font-size: 55px; /* Tamanho da fonte */
+}
+
+.home input {
+    /* Estiliza o input na seção home */
+    padding-inline: 160px; /* Espaçamento horizontal interno */
+    padding-block: 13px; /* Espaçamento vertical interno */
+    margin-top: 25px; /* Margem superior */
+    border: 2px solid #ccc; /* Borda cinza claro */
+    transition: all 0.3s ease; /* Transição */
+}
+
+input:hover {
+    /* Estiliza o input ao passar o mouse sobre ele */
+    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.2); /* Sombra */
+    border-color: var(--verde-claro); /* Muda a cor da borda para verde claro */
+    transform: scale(1.05); /* Aumenta o tamanho */
+}
+
+.home button {
+    /* Estiliza o botão na seção home */
+    padding-block: 13px; /* Espaçamento vertical interno */
+    padding-inline: 40px; /* Espaçamento horizontal interno */
+    background-color: grey; /* Cor de fundo cinza */
+    color: white; /* Cor do texto */
+}
+
+button i {
+    /* Estiliza o ícone dentro dos botões */
+    margin-right: 8px; /* Margem à direita do ícone */
+    font-size: 14px; /* Tamanho do ícone */
+    color: #fff; /* Cor do ícone */
+}
+
+.home button:hover {
+    /* Estiliza o botão ao passar o mouse sobre ele */
+    background-color: var(--verde-claro); /* Muda a cor de fundo para verde claro */
+}
+
+button:hover i {
+    /* Estiliza o ícone do botão ao passar o mouse sobre ele */
+    color: #f1c40f; /* Muda a cor do ícone para amarelo */
+}
+
+.img-home {
+    /* Estiliza a imagem na seção home */
+    display: block; /* Faz a imagem ocupar todo o bloco */
+    margin: 70px auto; /* Margem vertical e centraliza horizontalmente */
+    width: 65%; /* Largura da imagem */
+    height: auto; /* Altura automática para manter a proporção */
+}
+
+.sobre-nos {
+    /* Estiliza a seção sobre nós */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 120px; /* Margem superior */
+}
+
+.sobre-nos h1 {
+    /* Estiliza o h1 na seção sobre nós */
+    font-size: 45px; /* Tamanho da fonte */
+    margin-bottom: 30px; /* Margem inferior */
+    color: var(--verde-claro); /* Cor do texto */
+}
+
+.sobre-nos h4 {
+    /* Estiliza o h4 na seção sobre nós */
+    font-size: 22px; /* Tamanho da fonte */
+}
+
+.sobre-nos h3 {
+    /* Estiliza o h3 na seção sobre nós */
+    font-size: 35px; /* Tamanho da fonte */
+    margin-top: 130px; /* Margem superior */
+    color: var(--verde-claro); /* Cor do texto */
+}
+
+.sobre-nos .grid-sobre {
+    /* Estiliza o grid de itens na seção sobre nós */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Define três colunas iguais */
+    gap: 120px; /* Espaço entre os itens */
+    max-width: 1700px; /* Largura máxima do grid */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 0 20px; /* Espaçamento horizontal interno */
+}
+
+.grid-sobre .grid-item h4 {
+    /* Estiliza o h4 dentro dos itens do grid */
+    color: var(--verde-claro); /* Cor do texto */
+    font-size: 27px; /* Tamanho da fonte */
+    margin-block: 30px; /* Margem vertical */
+}
+
+.grid-sobre .grid-item p {
+    /* Estiliza o texto dentro dos itens do grid */
+    justify-content: space-between; /* Espaça o conteúdo */
+}
+
+.grid-item img {
+    /* Estiliza as imagens dentro dos itens do grid */
+    margin-top: 140px; /* Margem superior */
+    width: 100%; /* Largura total */
+    height: auto; /* Altura automática para manter a proporção */
+    max-width: 240px; /* Largura máxima */
+    object-fit: cover; /* Cobre o contêiner sem distorcer a imagem */
+}
+
+.sobre-nos button {
+    /* Estiliza o botão na seção sobre nós */
+    background-color: var(--verde-claro); /* Cor de fundo verde claro */
+    color: white; /* Cor do texto */
+    font-size: 22px; /* Tamanho da fonte */
+    padding: 15px; /* Espaçamento interno */
+    margin-top: 45px; /* Margem superior */
+    border: 1px solid var(--verde-claro); /* Borda verde claro */
+    border-radius: 5px; /* Bordas arredondadas */
+    position: relative; /* Deixa a posição relativa */
+    overflow: hidden; /* Garante que o elemento não ultrapasse os limites */
+    transition: color 0.4s ease; /* Transição */
+    cursor: pointer; /* Adiciona o cursor pointer ao passar sobre o botão */
+}
+
+.sobre-nos button::before {
+    /* Estiliza o elemento para o efeito de hover */
+    content: '';
+    position: absolute; /* Posiciona o elemento absoluto */
+    top: 0;
+    left: -100%; /* Começa fora da tela à esquerda */
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    background-color: white; /* Cor de fundo branca */
+    transition: left 0.4s ease; /* Transição */
+    z-index: 0; /* Mantém o elemento atrás do texto */
+}
+
+.sobre-nos button:hover::before {
+    /* Move o elemento para a posição final ao passar o mouse */
+    left: 0;
+}
+
+.sobre-nos button:hover {
+    /* Estiliza o botão ao passar o mouse sobre ele */
+    color: var(--verde-claro); /* Muda a cor do texto para verde claro */
+}
+
+.sobre-nos button span {
+    /* Estiliza o texto dentro do botão para garantir que fique acima do elemento */
+    position: relative; /* Necessário para z-index */
+    z-index: 1; /* Garante que o texto fique acima do elemento */
+}
+
+.parceiros {
+    /* Estiliza a seção de parceiros */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 120px; /* Margem superior */
+    margin-bottom: 120px; /* Margem inferior */
+    background-color: var(--verde-claro); /* Cor de fundo verde claro */
+    padding: 150px; /* Espaçamento interno */
+    color: white; /* Cor do texto */
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.parceiros h1, p {
+    /* Remove margens e padding dos títulos e parágrafos */
+    margin: 0;
+    padding: 0;
+}
+
+.parceiros h1 {
+    /* Estiliza o título na seção de parceiros */
+    font-size: 45px; /* Tamanho da fonte */
+    margin-bottom: 30px; /* Margem inferior */
+}
+
+.parceiros-content {
+    /* Estiliza o conteúdo da seção de parceiros */
+    display: flex; /* Deixa os elementos um do lado do outro */
+    align-items: center; /* Alinha verticalmente os itens */
+    justify-content: center; /* Centraliza horizontalmente os itens */
+    text-align: left; /* Alinha o texto à esquerda */
+    max-width: 1500px; /* Largura máxima */
+}
+
+.parceiros-content img {
+    /* Estiliza as imagens dentro do conteúdo dos parceiros */
+    margin-left: 20px; /* Espaço entre o texto e a imagem */
+    max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.span-parceiros {
+    /* Estiliza o span na seção de parceiros */
+    background-color: white; /* Cor de fundo branca */
+    height: 70px; /* Altura do span */
+    width: 700px; /* Largura do span */
+    display: flex; /* Organiza os elementos em linha */
+    margin: 20px 0; /* Margem superior e inferior */
+    border-radius: 35px; /* Bordas arredondadas */
+    gap: 100px; /* Espaço entre os itens */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+}
+
+.span-parceiros img {
+    /* Estiliza as imagens dentro do span */
+    height: 30px; /* Altura das imagens */
+    width: 80px; /* Largura das imagens */
+    object-fit: contain; /* Ajusta a imagem para caber no contêiner */
+}
+
+.parceiros-content img {
+    margin-left: 20px; /* Espaço entre o texto e a imagem */
+    max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.ajuda {
+    /* Estiliza a seção de ajuda */
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens */
+    justify-content: center; /* Centraliza horizontalmente os itens */
+}
+
+.ajuda .ajuda-texto {
+    /* Estiliza o texto na seção de ajuda */
+    display: flex;
+    flex-direction: column; /* Organiza os itens em coluna */
+}
+
+.ajuda img {
+    /* Estiliza a imagem na seção de ajuda */
+    max-width: 40%; /* Define um tamanho máximo para a imagem */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.ajuda h1 {
+    /* Estiliza o título na seção de ajuda */
+    margin: 0; /* Remove margens indesejadas */
+    color: var(--verde-claro); /* Cor do texto */
+    font-size: 45px; /* Tamanho da fonte */
+}
+
+.ajuda p {
+    /* Estiliza o parágrafo na seção de ajuda */
+    margin: 0; /* Remove margens */
+    margin-top: 20px; /* Margem superior */
+}
+
+.carrossel-container {
+    /* Estiliza o container do carrossel */
+    position: relative; /* Necessário para o posicionamento absoluto dentro do container */
+    width: 60%; /* Largura do container */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    overflow: hidden; /* Oculta o conteúdo que ultrapassa os limites do container */
+    margin-bottom: 300px; /* Margem inferior */
+}
+
+.carrossel {
+    /* Estiliza o carrossel */
+    margin-top: 140px; /* Margem superior */
+    display: flex; /* Organiza os itens em linha */
+    overflow-x: scroll; /* Permite rolagem horizontal */
+    scroll-behavior: smooth; /* Rolagem suave */
+    scroll-snap-type: x mandatory; /* Alinha os itens ao rolar */
+}
+
+.item {
+    /* Estiliza cada item do carrossel */
+    height: 430px; /* Altura do item */
+    flex: 0 0 25%; /* Exibe 4 itens de cada vez */
+    box-sizing: border-box; /* Inclui padding e border na largura e altura */
+    padding: 20px; /* Espaçamento interno */
+    border: 2px solid var(--verde-claro); /* Borda verde claro */
+    border-radius: 4px; /* Bordas arredondadas */
+    margin: 0 10px; /* Margem horizontal */
+    text-align: center; /* Centraliza o texto */
+    background-color: #fff; /* Cor de fundo branca */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    scroll-snap-align: start; /* Alinha o início do item ao rolar */
+}
+
+.item h3 {
+    /* Estiliza o título dentro do item do carrossel */
+    margin-top: 70px; /* Margem superior */
+    text-align: left; /* Alinha o texto à esquerda */
+    color: var(--verde-claro); /* Cor do texto */
+}
+
+.item p {
+    /* Estiliza o parágrafo dentro do item do carrossel */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-top: 20px; /* Margem superior */
+}
+
+.icon {
+    /* Estiliza os ícones */
+    font-size: 40px; /* Tamanho dos ícones */
+    color: #4CAF50; /* Cor dos ícones */
+    text-align: left; /* Alinha o texto à esquerda */
+}

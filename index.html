@@ -1,0 +1,130 @@
+<!DOCTYPE html> <!-- Declara o tipo de documento como HTML5 -->
+<html lang="pt-br"> <!-- Define o idioma da página como Português do Brasil -->
+<head>
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 para suportar caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a visualização para dispositivos móveis -->
+    <title>Teste frontend</title> <!-- Define o título da página exibido na aba do navegador -->
+    <link rel="stylesheet" href=".//style.css"> <!-- Inclui a folha de estilos externa (CSS) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Inclui a folha de estilos do Font Awesome para ícones -->
+</head>
+<body>
+    <header>
+        <nav class="nav-bar"> <!-- Define a barra de navegação -->
+            <div class="logo"> <!-- div para o logo -->
+                <i class="fa-solid fa-truck-fast"></i> <!-- Ícone do Font Awesome do caminhao -->
+                <h1>Rastreio Xpress</h1> <!-- Nome dosite -->
+            </div>
+
+            <div class="nav-list"> <!-- Container para a lista de navegação -->
+                <ul> <!-- Lista não ordenada -->
+                    <li class="nav-item"><a href="#home" class="nav-link"><strong>Home</strong></a></li> <!-- botoes e link para a seção Home -->
+                    <li class="nav-item"><a href="#sobre-nos" class="nav-link"><strong>Sobre nós</strong></a></li> <!-- botoes e link para a seção Sobre Nós -->
+                    <li class="nav-item"><a href="#parceiros" class="nav-link"><strong>Parceiros</strong></a></li> <!-- botoes e link para a seção Parceiros -->
+                    <li class="nav-item"><a href="#ajuda" class="nav-link"><strong>Ajuda</strong></a></li> <!-- botoes e link para a seção Ajuda -->
+                </ul>
+            </div>
+
+            <div class="nav-buttons"> <!-- Container para os botões de navegação -->
+                <button class="button-entrar"><a href="#"></a>Entrar</button> <!-- Botão de Entrar -->
+                <button class="button-cadastre"><a href="#"></a>Cadastre-se</button> <!-- Botão de Cadastre-se -->
+            </div>
+        </nav>
+    </header>
+
+    <!-- Seção Home -->
+    <section id="home" class="home"> <!-- Seção Home -->
+        <h1>Rastreie seu pedido!</h1> <!-- h1 de home -->
+        <input type="text" placeholder="Código de rastreamento"> <!-- input para o código de rastreamento -->
+        <button><i class="fa-solid fa-location-pin"></i>RASTREAR</button> <!-- Botão para rastrear com ícone de localização -->
+        
+        <img src="img/boxescerta.png" alt="Imagem de teste" class="img-home"> <!-- Imagem boxes -->
+    </section>
+
+    <!-- Seção Sobre Nós -->
+    <section id="sobre-nos" class="sobre-nos"> <!-- Seção Sobre Nós -->
+        <h1>Veja como o rastreio Expressa pode facilitar sua rotina</h1> <!-- h1 de sobre nos -->
+        <h4>As funcionalidades do Rastreio Express foram desenvolvidas para ajudar a rotina logística</h4> <!-- Subtítulo -->
+        <section class="grid-sobre"> <!-- Container para o grid de informações -->
+            <article class="grid-item"> <!-- Article para primeiro item -->
+                <img src="./img/Screenshot_1.png" alt=""> <!-- Imagem -->
+                <h4>Busque por uma encomenda</h4> <!-- Subtítulo do article -->
+                <p>Use o Rastreio Express para encontrar suas encomendas. Basta colar o código de rastreio no campo de buscas e aproveitar.</p> <!-- Descrição -->
+            </article>
+            <article class="grid-item"> <!-- Article para segundo item -->
+                <img src="./img/phone.png" alt=""> <!-- Imagem -->
+                <h4>Acompanhe suas encomendas</h4> <!-- Subtítulo do article -->
+                <p>O Rastreio Express foi desenvolvido para facilitar a visualização de suas encomendas. Nada de atualizações misteriosas e difíceis de entender.</p> <!-- Descrição -->
+            </article>
+            <article class="grid-item"> <!-- Article para terceiro item -->
+                <img src="./img/bell.png" alt=""> <!-- Imagem -->
+                <h4>Receba notificações</h4> <!-- Subtítulo do article -->
+                <p>No rastreio Express você acompanha tudo o que acontece com sua encomenda diretamente do seu e-mail</p> <!-- Descrição -->    
+            </article>    
+        </section>
+        <h3>O Rastreio Express foi desenvolvido especialmente para quem deseja usar a ferramenta simples e objetiva, sem enrolação</h3> <!-- h3 do sobre nos -->
+        <button><span>CADASTRE-SE AGORA</span></button> <!-- Botão de cadastro -->
+    </section>
+
+    <!-- Seção Parceiros -->
+    <section id="parceiros" class="parceiros"> <!-- Seção Parceiros -->
+        <div class="parceiros-content"> <!-- Container para o conteúdo dos parceiros -->
+            <div class="parceiros-texto"> <!-- Container para o texto dos parceiros -->
+                <h1>A plataforma de rastreamento <br>mais completa do mercado</h1> <!-- H1 do parceiros -->
+                <p>O melhor Rastreio controla todos os envios postados na Azul cargo Express e Correios<br><br> Porém, quem faz envios com etiquetas geradas na plataforma do Melhor Envio também consegue rastrear encomendas enviadas pela Jadlog, buslog via Brasil e latam cargo.</p> <!-- Descrição -->
+                <span class="span-parceiros"> <!-- Container para os logotipos dos parceiros -->
+                    <img src="img/jt-express-logo.png" alt=""> <!-- Logotipo 1 -->
+                    <img src="img/Azul_Cargo_Express_logo.png" alt=""> <!-- Logotipo 2 -->
+                    <img src="img/buslog-logo.png" alt=""> <!-- Logotipo 3 -->
+                    <img src="img/correios-logo.png" alt=""> <!-- Logotipo 4 -->
+                </span>
+            </div>
+            <img src="img/parceria.png" alt=""> <!-- Imagem -->
+        </div>
+    </section>
+
+    <!-- Seção Ajuda -->
+    <section id="ajuda" class="ajuda"> <!-- Seção Ajuda -->
+        <img src="img/helpsemfundo.png" alt=""> <!-- Imagem -->
+        <div class="ajuda-texto"> <!-- Container para o texto de ajuda -->
+            <h1>Precisa de ajuda:<br> com algum rastreio?</h1> <!-- H1 de ajuda -->
+            <p>Veja o que fazer em cada um dos casos</p> <!-- Subtítulo -->
+        </div>
+    </section>
+
+    <!-- Carrossel de Informações -->
+    <div class="carrossel-container"> <!-- Container para o carrossel -->
+        <div class="carrossel"> <!-- Container para os itens do carrossel -->
+            <div class="item"> <!-- Item 1 do carrossel -->
+                <i class="fa-solid fa-hourglass icon"></i> <!-- Ícone do Font Awesome -->
+                <h3>Estou esperando uma encomenda</h3> <!-- Título do item -->
+                <p>O remetente é a única pessoa que pode resolver problemas relacionados ao rastreio.<br><br> Sugerimos que peça para a pessoa responsável pelo envio entrar em contato com a gente seguindo as instruções para lojistas.</p> <!-- Descrição -->
+            </div>
+            <div class="item"> <!-- Item 2 do carrossel -->
+                <i class="fa-solid fa-box-open icon"></i> <!-- Ícone do Font Awesome -->
+                <h3>Enviei um pacote com etiqueta do Melhor Envio</h3> <!-- Título do item -->
+                <p>É muito fácil encontrar ajuda.<br> Veja só:<br><br> Entre na sua conta Melhor Envio<br><br> Vá até a opção Ajuda<br><br> Escolha o assunto que melhor representa sua dúvida e encontre o suporte que precisa</p> <!-- Descrição -->
+            </div>
+            <div class="item"> <!-- Item 3 do carrossel -->
+                <i class="fa-solid fa-tag icon"></i> <!-- Ícone do Font Awesome -->
+                <h3>Comprei uma etiqueta diretamente com a transportadora</h3> <!-- Título do item -->
+                <p>Sugerimos que entre em contato com a empresa responsável pelo envio.</p> <!-- Descrição -->
+            </div>
+            <div class="item"> <!-- Item 4 do carrossel -->
+                <i class="fa-solid fa-money-bill icon"></i> <!-- Ícone do Font Awesome -->
+                <h3>Eu vou pagar alguma taxa de uso ou mensalidade?</h3> <!-- Título do item -->
+                <p>Não! O Melhor Rastreio é totalmente gratuito e não cobra nenhuma mensalidade ou taxa pelos serviços.</p> <!-- Descrição -->
+            </div>
+            <div class="item"> <!-- Item 5 do carrossel -->
+                <i class="fa-solid fa-chart-column icon"></i> <!-- Ícone do Font Awesome -->
+                <h3>Posso rastrear várias encomendas?</h3> <!-- Título do item -->
+                <p>Sim, você pode rastrear múltiplas encomendas de diferentes transportadoras.</p> <!-- Descrição -->
+            </div>
+            <div class="item"> <!-- Item 6 do carrossel -->
+                <i class="fa-solid fa-signs-post icon"></i> <!-- Ícone do Font Awesome -->
+                <h3>Quais são os métodos de rastreamento disponíveis?</h3> <!-- Título do item -->
+                <p>Você pode usar o código de rastreio ou o número do pedido para acompanhar suas encomendas.</p> <!-- Descrição -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
